@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Bailey Hulsey's Professional Webpage</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>I'm Building a Website! It's gonna be awesome</h1>
+	<h2>Goals</h2>
+		<ul>
+			<li>To develop my coding and web development skills</li>
+			<li>To eventually provide a home for all my content</li>
+			<li>To serve as a sandbox for myself and anyone that I teach about web dev</li>
+		</ul>
+
+	<h2>Dreams</h2>
+		<ol>
+			<li>An adaptive learning environment where students can develop various skills</li>
+			<li>A knowledge database that dynamically displays relationships between ideas</li>
+		</ol>
+
+  <h2>Why is this in the middle of the screen?</h2>
+
+	<button type="nextbutton">
+		<a href = "https://www.wikipedia.com">Previous!</a>
+	</button>
+	<button type="prevbutton">
+		<a href = "https://www.google.com">Next!</a>
+	</button>
+
+  <h2>Let's mess around with JS!</h2>
+
+  <script>
+    let d = new Date();
+    document.body.innerHTML = document.body.innerHTML + "<p>Today's date is " + d + "</p>"
+  </script>
+
+  <h2>Is this going to be a code snippet?</h2>
+  <p> <!--align = "center">-->
+  <!--This draws the Canvas on the webpage -->
+    <canvas id="mycanvas"></canvas>
+  </p>
+</body>
+<!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400);
+        frameRate(30);
+
+        // ProgramCodeGoesHere
+        fill(255, 255, 0);
+        ellipse(200, 200, 200, 200);
+        noFill();
+        stroke(0, 0, 0);
+        strokeWeight(2);
+        arc(200, 200, 150, 100, 0, PI);
+        fill(0, 0, 0);
+        ellipse(250, 200, 10, 10);
+        ellipse(153, 200, 10, 10);
+    }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas");
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc);
+ </script>
+</html>
