@@ -33,9 +33,13 @@ nav {
 #wic-button:hover {
   width: 95%;
 }
+a {	
+  text-decoration: none;
+}
 .button {
   list-style: none;
   font-weight: bold;
+  text-decoration: none;
   color: black;
   background: var(--main-grey);
   padding: 10px;
